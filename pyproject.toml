@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coding-agent-cli"
+version = "0.1.0"
+description = "A minimal, multi-provider autonomous coding agent CLI (Claude / GPT / GLM)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.40",
+    "openai>=1.0",
+]
+
+[project.scripts]
+coding-agent = "agent:main"
+
+[tool.setuptools]
+py-modules = ["agent"]
